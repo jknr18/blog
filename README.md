@@ -10,9 +10,9 @@ This RESTful web service can be deployed on most Linux versions with the followi
 
 3. Set the following environment variable:
 
-    `export FLASK_ENV=development`
+    `user@host:~$ export FLASK_ENV=development`
 
 4. Launch the application:
 
-    `python blog_api.py`
+    `user@host:~$ python blog_api.py`
 
