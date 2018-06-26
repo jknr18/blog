@@ -2,9 +2,7 @@ from flask import Flask, request
 import sqlite3
 import json
 
-HOST = '0.0.0.0'
-PORT = 8080
-DB_FILE = "blog.db"
+DB_FILE = "/opt/apps/blog/blog.db"
 DEBUG_MODE = False
 
 blog_api = Flask(__name__)
@@ -48,6 +46,6 @@ def save_post():
   return "Post Successful."
 
 if __name__=='__main__':
-    blog_api.run(host=HOST, port=PORT, debug=DEBUG_MODE)
+    blog_api.run(debug=DEBUG_MODE)
 
 

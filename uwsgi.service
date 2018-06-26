@@ -1,0 +1,17 @@
+[Unit]
+Description=uWSGI Blog API Server
+After=syslog.target
+
+[Service]
+ExecStart=/opt/apps/blog/bin/uwsgi -s :8080 --protocol=http --wsgi-file /opt/apps/blog/blog_api.py --callable blog_api --logto /opt/apps/blog/blog_api.log
+
+RuntimeDirectory=uwsgi
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
+
