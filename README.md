@@ -6,7 +6,9 @@ This RESTful web service can be deployed on most Linux variants with the followi
 1. Prepare virtual environment:
 
     `user@host:~$ virtualenv /opt/apps/blog`
+    
     `user@host:~$ source /opt/apps/blog/bin/activate`
+    
     `user@host:~$ pip install uWSGI Flask`
 
 
@@ -19,5 +21,5 @@ This RESTful web service can be deployed on most Linux variants with the followi
 
 Alternatively, you can start the application directly:
 
-    `/opt/apps/blog/bin/uwsgi -s :8080 --protocol=http --wsgi-file /opt/apps/blog/blog_api.py --callable blog_api`
+`/opt/apps/blog/bin/uwsgi -s :8080 --protocol=http --wsgi-file /opt/apps/blog/blog_api.py --callable blog_api`
 
